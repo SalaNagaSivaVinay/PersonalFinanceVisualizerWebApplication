@@ -1,0 +1,69 @@
+/* Tailwind Base, Components, and Utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Layer for Global Variables (if needed) */
+@layer base {
+  :root {
+    /* Colors, Background and Foreground */
+    --primary: hsl(222.2, 47.4%, 11.2%);
+    --secondary: hsl(210, 40%, 96.1%);
+    --destructive: hsl(0, 84.2%, 60.2%);
+    /* Add other variables */
+  }
+}
+
+/* Custom Button Styles */
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 text-white font-semibold rounded-md;
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .btn-secondary {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+
+  .btn-destructive {
+    background-color: var(--destructive);
+    color: white;
+  }
+}
+
+/* Utility Classes for Shadows */
+@layer utilities {
+  .shadow-elevation-1 {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-elevation-2 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-elevation-3 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Custom Global Fonts */
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+
+  p {
+    font-family: 'Arial', sans-serif;
+  }
+}
